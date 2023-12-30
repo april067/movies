@@ -1,22 +1,29 @@
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const paths = require('./paths');
+
+// const paths = require('./paths');
 const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   mode: 'development',
+
+  // Control how source maps are generated
   devtool: 'inline-source-map',
+
+  // Spin up a server for quick development
   devServer: {
     historyApiFallback: true,
-    static: {
-      directory: paths.dist,
-    },
+    // static: {
+    //   directory: paths.dist,
+    // },
     compress: true,
     hot: true,
     port: 2330,
   },
+
   module: {
     rules: [
+      // Styles: Inject CSS into the head with source maps
       {
         test: /\.(scss|css)$/,
         use: [
@@ -45,5 +52,8 @@ module.exports = merge(commonConfig, {
       },
     ],
   },
+
   plugins: [new webpack.HotModuleReplacementPlugin()],
+
+  stats: 'minimal',
 });
