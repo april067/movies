@@ -2,6 +2,7 @@
   "name": "movies",
   "version": "1.1.0",
   "description": "movies project on webpack boilerplate",
+  "homepage": "https://april067.github.io/movies/",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
@@ -17,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/april067/movies/issues"
   },
-  "homepage": "https://github.com/april067/movies#readme",
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@babel/preset-env": "^7.23.6",

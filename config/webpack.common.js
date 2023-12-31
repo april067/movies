@@ -12,8 +12,8 @@ module.exports = {
   // Where webpack outputs the assets and bundles
   output: {
     path: paths.dist,
-    filename: '[name].bundle.js',
     publicPath: '/',
+    filename: '[name].bundle.js',
   },
 
   module: {
