@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmovies=self.webpackChunkmovies||[]).push([[179],{945:()=>{console.log("this is an example")}},s=>{s(s.s=945)}]);
